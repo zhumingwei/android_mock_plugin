@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.bilibili.comicplugin</groupId>
+  <artifactId>comic_all_plugin</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200923114904</lastUpdated>
+  </versioning>
+</metadata>

@@ -1,0 +1,3 @@
+include ':ComicPlugin'
+include ':app'
+rootProject.name = "Comicplugin"
