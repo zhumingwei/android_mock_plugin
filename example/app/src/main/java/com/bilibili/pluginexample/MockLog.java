@@ -18,8 +18,8 @@ public class MockLog {
     public static int i(String tag, String msg) { return Log.i(tag,msg + " ===== mock 所有Log代码"); }
     public static int w(String tag, String msg) { return Log.w(tag,msg + " ===== mock 所有Log代码"); }
     public static int e(String tag, String msg) { return Log.e(tag,msg + " ===== mock 所有Log代码"); }
-    public static String getHello(OriginMethod originMethod,String msg){
-        return "hello +++ " + msg;
+    public static String getHello(OriginMethodInterface originMethod,String msg){
+        return "adsfas getHello mock了 " + msg;
     }
 
 }

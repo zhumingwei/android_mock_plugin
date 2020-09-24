@@ -8,18 +8,25 @@ import android.util.Log;
  * @email zdf312192599@163.com
  */
 class OriginMethod {
-    public static void log(){
-        Log.d("log","log");
+    public static void log() {
+        Log.d("log", "log");
     }
 
-    public void onCreate(){
-
+    public void onCreate() {
+        OriginMethodInterface originMethodInterface = new OriginMethodabs();
         String hello = "hello";
-        Log.e("adsfasfeee",getHello(hello));
+        Log.e("adsfasfeee", originMethodInterface.getHello(hello));
     }
 
-    public String getHello(String hello){
+}
+
+class OriginMethodabs implements OriginMethodInterface {
+    public String getHello(String hello) {
         return "hello";
     }
+}
+
+interface OriginMethodInterface {
+    public String getHello(String hello);
 
 }

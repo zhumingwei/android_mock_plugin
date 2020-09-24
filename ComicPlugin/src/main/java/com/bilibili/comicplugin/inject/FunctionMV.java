@@ -1,13 +1,9 @@
 package com.bilibili.comicplugin.inject;
 
-import com.bilibili.comicplugin.ComicPlugin;
-import com.bilibili.comicplugin.model.AsmConfig;
 import com.bilibili.comicplugin.model.AsmFunctionMockConfig;
 
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
-
-import java.util.function.Predicate;
 
 import static org.objectweb.asm.Opcodes.INVOKESTATIC;
 
@@ -16,18 +12,18 @@ import static org.objectweb.asm.Opcodes.INVOKESTATIC;
  * @date 2020/9/22 15:26
  * @email zdf312192599@163.com
  */
-public class CompleteMV extends MethodVisitor {
+public class FunctionMV extends MethodVisitor {
     private AsmFunctionMockConfig.StaticAsmConfig staticAsmConfig;
 
-    public CompleteMV(int api) {
+    public FunctionMV(int api) {
         super(api);
     }
 
-    public CompleteMV(int api, MethodVisitor mv) {
+    public FunctionMV(int api, MethodVisitor mv) {
         super(api, mv);
     }
 
-    public CompleteMV(MethodVisitor mv, AsmFunctionMockConfig.StaticAsmConfig staticAsmConfig){
+    public FunctionMV(MethodVisitor mv, AsmFunctionMockConfig.StaticAsmConfig staticAsmConfig){
         this(Opcodes.ASM5,mv);
         this.staticAsmConfig = staticAsmConfig;
     }

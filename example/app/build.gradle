@@ -42,66 +42,66 @@ asmConfig {
                         return true
                     },
                     "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
-                        return owner == "com.bilibili.pluginexample.OriginMethod" && name == "getHello" && "(Ljava/lang/String;)Ljava/lang/String;" == desc
+                        return owner == "com.bilibili.pluginexample.OriginMethodInterface" && name == "getHello" && "(Ljava/lang/String;)Ljava/lang/String;" == desc
                     },
                     "targetClass"       : "com.bilibili.pluginexample.MockLog"
             ],
-            [
-                    "classFilter"       : { String name ->
-                        return true
-                    },
-                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
-                        return true
-                    },
-                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
-                        String wantname = "d"
-                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
-                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
-                    },
-                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
-            ],
-            [
-                    "classFilter"       : { String name ->
-                        return true
-                    },
-                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
-                        return true
-                    },
-                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
-                        String wantname = "i"
-                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
-                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
-                    },
-                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
-            ],
-            [
-                    "classFilter"       : { String name ->
-                        return true
-                    },
-                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
-                        return true
-                    },
-                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
-                        String wantname = "w"
-                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
-                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
-                    },
-                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
-            ],
-            [
-                    "classFilter"       : { String name ->
-                        return true
-                    },
-                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
-                        return true
-                    },
-                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
-                        String wantname = "e"
-                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
-                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
-                    },
-                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
-            ],
+//            [
+//                    "classFilter"       : { String name ->
+//                        return true
+//                    },
+//                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
+//                        return true
+//                    },
+//                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
+//                        String wantname = "d"
+//                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
+//                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
+//                    },
+//                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
+//            ],
+//            [
+//                    "classFilter"       : { String name ->
+//                        return true
+//                    },
+//                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
+//                        return true
+//                    },
+//                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
+//                        String wantname = "i"
+//                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
+//                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
+//                    },
+//                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
+//            ],
+//            [
+//                    "classFilter"       : { String name ->
+//                        return true
+//                    },
+//                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
+//                        return true
+//                    },
+//                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
+//                        String wantname = "w"
+//                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
+//                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
+//                    },
+//                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
+//            ],
+//            [
+//                    "classFilter"       : { String name ->
+//                        return true
+//                    },
+//                    "methodFilter"      : { int access, String name, String desc, String signature, String[] exceptions ->
+//                        return true
+//                    },
+//                    "invokeMethodFilter": { int opcode, String owner, String name, String desc, boolean itf ->
+//                        String wantname = "e"
+//                        String wantdesc = "(Ljava/lang/String;Ljava/lang/String;)I"
+//                        return opcode == org.objectweb.asm.Opcodes.INVOKESTATIC && owner == "android.util.Log" && name.equals(wantname) && wantdesc.equals(desc) && !itf
+//                    },
+//                    "targetClass"       : "com.bilibili.pluginexample.MockLog"
+//            ],
 
     ]
 

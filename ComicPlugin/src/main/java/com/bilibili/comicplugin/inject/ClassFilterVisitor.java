@@ -1,7 +1,5 @@
 package com.bilibili.comicplugin.inject;
 
-import com.bilibili.comicplugin.ComicPlugin;
-import com.bilibili.comicplugin.model.AsmConfig;
 import com.bilibili.comicplugin.model.AsmFunctionMockConfig;
 
 import org.objectweb.asm.ClassVisitor;
@@ -9,8 +7,6 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
-
-import java.util.function.Predicate;
 
 /**
  * @author zhumingwei
@@ -53,7 +49,7 @@ public class ClassFilterVisitor extends ClassVisitor {
 
         if (staticAsmConfig.methodFilter.call(access, name.replace("/", "."), desc, signature, exceptions)) {
             MethodVisitor methodVisitor = cv.visitMethod(access, name, desc, signature, exceptions);
-            return new CompleteMV(methodVisitor,staticAsmConfig);
+            return new FunctionMV(methodVisitor,staticAsmConfig);
         } else {
             return super.visitMethod(access, name, desc, signature, exceptions);
         }
